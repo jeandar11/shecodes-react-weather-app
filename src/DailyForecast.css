@@ -1,0 +1,20 @@
+.DailyForecast .card {
+  background-color: transparent;
+  border: none;
+}
+.DailyForecast .card-body {
+  padding: 5px;
+  text-align: center;
+}
+
+.DailyForecast #daily-forecast .card-body i {
+  font-size: 35px;
+  padding: 8px;
+}
+.DailyForecast #daily-forecast .card-body h6 {
+  font-size: 15px;
+}
+.DailyForecast #daily-forecast .card-body p {
+  font-size: 13px;
+  line-height: 10px;
+}

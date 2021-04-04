@@ -1,0 +1,22 @@
+.HourlyForecast .card {
+  background-color: transparent;
+  border: none;
+}
+.HourlyForecast .card-body {
+  padding: 5px;
+  text-align: center;
+}
+
+.HourlyForecast #hourly-forecast {
+  padding: 10px 0 10px 0;
+}
+.HourlyForecast #hourly-forecast .card-body i {
+  font-size: 30px;
+}
+.HourlyForecast #hourly-forecast .card-body h6 {
+  font-size: 14px;
+}
+.HourlyForecast #hourly-forecast .card-body p {
+  font-size: 13px;
+  line-height: 8px;
+}

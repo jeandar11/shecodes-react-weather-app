@@ -1,0 +1,52 @@
+.Weather header {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin-top: 30px;
+}
+
+.Weather h1 {
+  font-size: 80px;
+  line-height: 60px;
+  padding-bottom: 10px;
+}
+
+.Weather h2 {
+  font-size: 35px;
+  line-height: 25px;
+}
+
+.Weather h3 {
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.Weather h4 {
+  font-size: 17px;
+  line-height: 10px;
+}
+
+.Weather .current-weather {
+  margin-top: 30px;
+  text-align: center;
+}
+.Weather .current-weather i {
+  font-size: 100px;
+}
+.Weather .current-weather .temperature {
+  font-size: 60px;
+  line-height: 65px;
+  position: relative;
+  left: 24px;
+}
+.Weather .current-weather .units {
+  font-size: 15px;
+  position: relative;
+  bottom: 24px;
+}
+
+.Weather .units a {
+  text-decoration: none;
+}
+.Weather .units .active {
+  color: black;
+  cursor: default;
+}
