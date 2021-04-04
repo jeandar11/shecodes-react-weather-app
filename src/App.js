@@ -17,7 +17,7 @@ export default function App() {
         </div>
         <small id="github-link">
           <a
-            href="https://github.com/jeandar11/SheCodes-plus-final-project"
+            href="https://github.com/jeandar11/shecodes-react-weather-app"
             target="_blank"
             rel="noreferrer"
           >
