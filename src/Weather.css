@@ -43,9 +43,6 @@
   bottom: 24px;
 }
 
-.Weather .units a {
-  text-decoration: none;
-}
 .Weather .units .active {
   color: black;
   cursor: default;

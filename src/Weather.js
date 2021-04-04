@@ -22,13 +22,10 @@ export default function Weather() {
             <div className="temperature">
               <span id="local-temperature">5</span>
               <span className="units">
-                <a href="#" id="celsius-link" className="active">
+                <button id="celsius-link" className="active">
                   °C
-                </a>{" "}
-                |
-                <a href="#" id="fahrenheit-link">
-                  °F
-                </a>
+                </button>{" "}
+                |<button id="fahrenheit-link">°F</button>
               </span>
             </div>
           </div>
