@@ -1,3 +1,18 @@
+.Weather form .search-engine {
+  max-width: fit-content;
+  float: left;
+}
+
+.Weather .btn {
+  margin-left: 8px;
+  transition: all 200ms ease-in-out;
+  width: 40px;
+}
+.Weather :hover.btn {
+  background-color: #a8edea;
+  border-color: #a8edea;
+}
+
 .Weather header {
   font-family: "Yanone Kaffeesatz", sans-serif;
   margin-top: 30px;
