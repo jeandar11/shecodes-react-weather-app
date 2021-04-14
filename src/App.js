@@ -10,8 +10,6 @@ export default function App() {
       <div className="container">
         <div id="main-app">
           <WeatherSearch defaultCity="Montreal" />
-          <HourlyForecast />
-          <DailyForecast />
         </div>
         <small id="github-link">
           <a
