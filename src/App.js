@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Weather from "./Weather.js";
+import WeatherSearch from "./WeatherSearch.js";
 import HourlyForecast from "./HourlyForecast.js";
 import DailyForecast from "./DailyForecast.js";
 
@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div id="main-app">
-          <Weather defaultCity="Montreal" />
+          <WeatherSearch defaultCity="Montreal" />
           <HourlyForecast />
           <DailyForecast />
         </div>

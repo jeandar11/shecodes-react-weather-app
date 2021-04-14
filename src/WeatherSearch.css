@@ -1,0 +1,14 @@
+.WeatherSearch form .search-engine {
+  max-width: fit-content;
+  float: left;
+}
+
+.WeatherSearch .btn {
+  margin-left: 8px;
+  transition: all 200ms ease-in-out;
+  width: 40px;
+}
+.WeatherSearch :hover.btn {
+  background-color: #a8edea;
+  border-color: #a8edea;
+}
