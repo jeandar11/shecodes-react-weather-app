@@ -35,15 +35,10 @@
   font-size: 60px;
   line-height: 65px;
   position: relative;
-  left: 24px;
+  left: 20px;
 }
 .WeatherInfo .current-weather .units {
   font-size: 15px;
   position: relative;
-  bottom: 24px;
-}
-
-.WeatherInfo .units .active {
-  color: black;
-  cursor: default;
+  bottom: 30px;
 }
