@@ -65,7 +65,7 @@ export default function WeatherSearch(props) {
           </button>
         </form>
         <WeatherInfo data={weatherData} />
-        <HourlyForecast />
+        <HourlyForecast coordinates={weatherData.coordinates} />
         <DailyForecast coordinates={weatherData.coordinates} />
       </div>
     );
