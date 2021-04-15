@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.css";
 import WeatherSearch from "./WeatherSearch.js";
-import HourlyForecast from "./HourlyForecast.js";
-import DailyForecast from "./DailyForecast.js";
 
 export default function App() {
   return (
