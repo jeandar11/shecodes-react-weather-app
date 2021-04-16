@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./HourlyForecast.css";
+import "./Forecast.css";
+import DayForecast from "./DayForecast";
 import HourForecast from "./HourForecast";
 
-export default function HourlyForecast(props) {
+export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
+  const [dailyForecast, setDailyForecast] = useState(null);
   const [hourlyForecast, setHourlyForecast] = useState(null);
 
   useEffect(() => {
@@ -12,19 +14,33 @@ export default function HourlyForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    setDailyForecast(response.data.daily);
     setHourlyForecast(response.data.hourly);
     setLoaded(true);
   }
 
   if (loaded) {
     return (
-      <div className="HourlyForecast">
+      <div className="Forecast">
         <div className="row" id="hourly-forecast">
           {hourlyForecast.map(function (hourlyForecast, index) {
             if (index > 0 && index < 7) {
               return (
                 <div className="col-sm-2" key={index}>
                   <HourForecast data={hourlyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
+        <div className="row" id="daily-forecast">
+          {dailyForecast.map(function (dailyForecast, index) {
+            if (index > 0 && index < 5) {
+              return (
+                <div className="col-sm-3" key={index}>
+                  <DayForecast data={dailyForecast} />
                 </div>
               );
             } else {

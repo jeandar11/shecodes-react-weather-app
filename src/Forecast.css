@@ -1,0 +1,33 @@
+.Forecast .card {
+  background-color: transparent;
+  border: none;
+}
+.Forecast .card-body {
+  padding: 5px;
+  text-align: center;
+}
+
+.Forecast #daily-forecast i {
+  font-size: 35px;
+  padding: 8px;
+}
+.Forecast #daily-forecast h6 {
+  font-size: 15px;
+}
+.Forecast #daily-forecast p {
+  font-size: 13px;
+  line-height: 10px;
+}
+.Forecast #hourly-forecast {
+  padding: 10px 0 10px 0;
+}
+.Forecast #hourly-forecast .card-body i {
+  font-size: 30px;
+}
+.Forecast #hourly-forecast .card-body h6 {
+  font-size: 14px;
+}
+.Forecast #hourly-forecast .card-body p {
+  font-size: 13px;
+  line-height: 8px;
+}

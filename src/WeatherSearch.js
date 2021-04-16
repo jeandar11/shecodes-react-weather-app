@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherSearch.css";
 import WeatherInfo from "./WeatherInfo";
-import HourlyForecast from "./HourlyForecast.js";
-import DailyForecast from "./DailyForecast.js";
+import Forecast from "./Forecast.js";
 import Loader from "react-loader-spinner";
 
 export default function WeatherSearch(props) {
@@ -66,8 +65,7 @@ export default function WeatherSearch(props) {
           </button>
         </form>
         <WeatherInfo data={weatherData} />
-        <HourlyForecast coordinates={weatherData.coordinates} />
-        <DailyForecast coordinates={weatherData.coordinates} />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
