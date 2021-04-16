@@ -8,14 +8,17 @@ export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [dailyForecast, setDailyForecast] = useState(null);
   const [hourlyForecast, setHourlyForecast] = useState(null);
+  const [timezone, setTimezone] = useState(null);
 
   useEffect(() => {
     setLoaded(false);
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    console.log(response);
     setDailyForecast(response.data.daily);
     setHourlyForecast(response.data.hourly);
+    setTimezone(response.data.timezone_offset);
     setLoaded(true);
   }
 
@@ -27,7 +30,7 @@ export default function Forecast(props) {
             if (index > 0 && index < 7) {
               return (
                 <div className="col-sm-2" key={index}>
-                  <HourForecast data={hourlyForecast} />
+                  <HourForecast data={hourlyForecast} timezone={timezone} />
                 </div>
               );
             } else {

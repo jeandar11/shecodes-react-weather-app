@@ -1,7 +1,7 @@
 import React from "react";
 import "./WeatherInfo.css";
-import FormattedDate from "./FormattedDate";
-import FormattedTime from "./FormattedTime";
+import LocalDate from "./LocalDate";
+import LocalTime from "./LocalTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
@@ -13,10 +13,16 @@ export default function WeatherInfo(props) {
           <header>
             <h1>{props.data.name}</h1>
             <h2>
-              <FormattedDate date={props.data.date} />
+              <LocalDate
+                date={props.data.date}
+                timezone={props.data.timezone}
+              />
             </h2>
             <h2>
-              <FormattedTime time={props.data.time} />
+              <LocalTime
+                time={props.data.time}
+                timezone={props.data.timezone}
+              />
             </h2>
             <h3>{props.data.description}</h3>
             <h4>Humidity: {props.data.humidity}%</h4>

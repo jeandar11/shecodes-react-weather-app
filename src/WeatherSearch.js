@@ -13,8 +13,9 @@ export default function WeatherSearch(props) {
     setWeatherData({
       ready: true,
       name: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      time: new Date(response.data.dt * 1000),
+      date: response.data.dt * 1000,
+      time: response.data.dt * 1000,
+      timezone: response.data.timezone,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,

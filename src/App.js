@@ -6,10 +6,10 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div id="main-app">
+        <div className="main-app">
           <WeatherSearch defaultCity="Montreal" />
         </div>
-        <small id="github-link">
+        <small className="github">
           <a
             href="https://github.com/jeandar11/shecodes-react-weather-app"
             target="_blank"
