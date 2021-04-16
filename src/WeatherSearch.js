@@ -4,6 +4,7 @@ import "./WeatherSearch.css";
 import WeatherInfo from "./WeatherInfo";
 import HourlyForecast from "./HourlyForecast.js";
 import DailyForecast from "./DailyForecast.js";
+import Loader from "react-loader-spinner";
 
 export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -71,6 +72,14 @@ export default function WeatherSearch(props) {
     );
   } else {
     searchCity();
-    return <h2>Loading...</h2>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#000000"
+        height={50}
+        width={50}
+        timeout={3000} //3 secs
+      />
+    );
   }
 }
