@@ -15,7 +15,6 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response);
     setDailyForecast(response.data.daily);
     setHourlyForecast(response.data.hourly);
     setTimezone(response.data.timezone_offset);
