@@ -33,6 +33,7 @@ export default function WeatherSearch(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    document.getElementById("search-form").value = "";
     searchCity();
   }
 
@@ -46,6 +47,7 @@ export default function WeatherSearch(props) {
         <form onSubmit={handleSubmit}>
           <div className="search-engine">
             <input
+              id="search-form"
               type="text"
               className="form-control"
               placeholder="Enter your city here..."
