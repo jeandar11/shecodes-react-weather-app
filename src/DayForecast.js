@@ -18,14 +18,29 @@ export default function DayForecast(props) {
     return day;
   }
 
+  function maxTemp() {
+    let maxTemp = Math.round(props.data.temp.max);
+    if (props.unit !== "celsius") {
+      maxTemp = Math.round((maxTemp * 9) / 5 + 32);
+    }
+    return `${maxTemp}°`;
+  }
+
+  function minTemp() {
+    let minTemp = Math.round(props.data.temp.min);
+    if (props.unit !== "celsius") {
+      minTemp = Math.round((minTemp * 9) / 5 + 32);
+    }
+    return `${minTemp}°`;
+  }
+
   return (
     <div className="card">
       <div className="card-body">
         <WeatherIcon code={props.data.weather[0].icon} />
         <h6 className="card-title">{displayDay()}</h6>
         <p className="card-text">
-          <strong> {Math.round(props.data.temp.max)}°</strong>{" "}
-          {Math.round(props.data.temp.min)}°
+          <strong> {maxTemp()}</strong> {minTemp()}
         </p>
       </div>
     </div>

@@ -29,7 +29,11 @@ export default function Forecast(props) {
             if (index > 0 && index < 7) {
               return (
                 <div className="col-sm-2" key={index}>
-                  <HourForecast data={hourlyForecast} timezone={timezone} />
+                  <HourForecast
+                    data={hourlyForecast}
+                    timezone={timezone}
+                    unit={props.unit}
+                  />
                 </div>
               );
             } else {
@@ -42,7 +46,7 @@ export default function Forecast(props) {
             if (index > 0 && index < 5) {
               return (
                 <div className="col-sm-3" key={index}>
-                  <DayForecast data={dailyForecast} />
+                  <DayForecast data={dailyForecast} unit={props.unit} />
                 </div>
               );
             } else {

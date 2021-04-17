@@ -8,6 +8,7 @@ import Loader from "react-loader-spinner";
 export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [unit, setUnit] = useState("celsius");
 
   function handleResponse(response) {
     setWeatherData({
@@ -80,8 +81,8 @@ export default function WeatherSearch(props) {
             <i className="fas fa-map-marker-alt"></i>
           </button>
         </form>
-        <WeatherInfo data={weatherData} />
-        <Forecast coordinates={weatherData.coordinates} />
+        <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
+        <Forecast coordinates={weatherData.coordinates} unit={unit} />
       </div>
     );
   } else {
