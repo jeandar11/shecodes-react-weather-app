@@ -3,7 +3,12 @@
 }
 
 .App .main-app {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 55%,
+    rgb(22, 209, 219) 100%
+  );
   margin-top: 10px;
   padding: 30px;
   border-radius: 5%;
@@ -11,5 +16,5 @@
 
 .App .github a {
   text-decoration: none;
-  color: #fa98b7;
+  color: rgb(22, 209, 219);
 }
